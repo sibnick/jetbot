@@ -14,7 +14,7 @@ then
     export JETBOT_DOCKER_REMOTE=jetbot
 elif [[ "$L4T_VERSION" == "32.4.4" ]]
 then
-    export JETBOT_DOCKER_REMOTE=jetbot
+    export JETBOT_DOCKER_REMOTE=wavehare
 fi
 
 ./set_nvidia_runtime.sh
