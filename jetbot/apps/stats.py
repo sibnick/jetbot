@@ -110,8 +110,9 @@ while True:
 
         bus_voltage = ina.getBusVoltage_V()        # voltage on V- (load side)
         current = ina.getCurrent_mA()              # current in mA
-        p = bus_voltage/12.6*100
+        p = (bus_voltage - 9)/3.6*100
         if(p > 100):p = 100
+        if(p < 0):p = 0
         if(current > 30):
             Charge = not Charge
         else:
