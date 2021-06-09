@@ -22,6 +22,7 @@ then
 	    -v $WORKSPACE:/workspace \
 	    --workdir /workspace \
 	    --name=jetbot_jupyter \
+	    --memory=3g \
 	    --memory-swap=$JETBOT_JUPYTER_MEMORY_SWAP \
 	    --env JETBOT_DEFAULT_CAMERA=$JETBOT_CAMERA \
 	    $JETBOT_DOCKER_REMOTE/jetbot:jupyter-$JETBOT_VERSION-$L4T_VERSION
@@ -40,7 +41,7 @@ else
 	    -v $WORKSPACE:/workspace \
 	    --workdir /workspace \
 	    --name=jetbot_jupyter \
-	    --memory=$JETBOT_JUPYTER_MEMORY \
+	    --memory=3g \
 	    --memory-swap=$JETBOT_JUPYTER_MEMORY_SWAP \
 	    --env JETBOT_DEFAULT_CAMERA=$JETBOT_CAMERA \
 	    $JETBOT_DOCKER_REMOTE/jetbot:jupyter-$JETBOT_VERSION-$L4T_VERSION
